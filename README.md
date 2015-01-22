@@ -4,6 +4,8 @@ An [Ansible](http://www.ansible.com) role for automated deployments of the [Dyna
 
 This role makes the Java Agent available to Apache Tomcat by injecting an *-agentpath* option into the ```CATALINA_OPTS``` (or any other) environment variable in a file (typically an executable script). It is assumed that this script either executes Tomcat directly or is sourced by another script before Tomcat is executed.
 
+**Note**: You have to restart your application after placing the agent.
+
 **Note**: Currently, we support only Linux hosts, support for installing Windows hosts is in the making.
 
 ## Download
@@ -24,14 +26,14 @@ This roles requires an installation of the Dynatrace Java Agents package, which 
 
 As defined in ```defaults/main.yml```:
 
-| Name                                        | Default                                  | Description |
-|---------------------------------------------|------------------------------------------|-------------|
-| *dynatrace_tomcat_agent_env_var_name*       | CATALINA_OPTS                            | The name of the environment variable to be used for Agent injection. |
-| **dynatrace_tomcat_agent_env_var_file_name** |                                         | The name of the file to be modified. |
-| *dynatrace_tomcat_agent_name*               | apache-tomcat-agent                      | The name of the Java Agent as it appears in Dynatrace. |
-| *dynatrace_tomcat_agent_collector_hostname* | localhost                                | The location of the collector the Agent shall connect to. |
-| *dynatrace_tomcat_agent_collector_port*     | 9998                                     | The port on the collector the Agent shall connect to. |
-| *dynatrace_tomcat_agent_linux_agent_path*   | /opt/dynatrace/agent/lib64/libdtagent.so | The path to the Agent libary. |
+| Name                                         | Default                                  | Description |
+|----------------------------------------------|------------------------------------------|-------------|
+| *dynatrace_tomcat_agent_env_var_name*        | CATALINA_OPTS                            | The name of the environment variable to be used for Agent injection. |
+| **dynatrace_tomcat_agent_env_var_file_name** |                                          | The name of the file to be modified. |
+| *dynatrace_tomcat_agent_name*                | apache-tomcat-agent                      | The name of the Java Agent as it appears in Dynatrace. |
+| *dynatrace_tomcat_agent_collector_hostname*  | localhost                                | The location of the collector the Agent shall connect to. |
+| *dynatrace_tomcat_agent_collector_port*      | 9998                                     | The port on the collector the Agent shall connect to. |
+| *dynatrace_tomcat_agent_linux_agent_path*    | /opt/dynatrace/agent/lib64/libdtagent.so | The path to the Agent libary. |
 
 ## Example Playbook
 
