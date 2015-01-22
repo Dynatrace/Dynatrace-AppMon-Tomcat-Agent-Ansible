@@ -10,7 +10,7 @@ This role makes the Java Agent available to Apache Tomcat by injecting an *-agen
 
 The role is available via:
 
-- [Ansible Galaxy](https://galaxy.ansible.com/list#/roles/)
+- [Ansible Galaxy](https://galaxy.ansible.com/list#/roles/2654)
 - [GitHub](https://github.com/Dynatrace/Dynatrace-Tomcat-Agent-Ansible)
 
 ## Requirements
