@@ -4,6 +4,8 @@ An [Ansible](http://www.ansible.com) role for automated deployments of the [Dyna
 
 This role makes the Java Agent available to Apache Tomcat by injecting an *-agentpath* option into the ```CATALINA_OPTS``` (or any other) environment variable in a file (typically an executable script). It is assumed that this script either executes Tomcat directly or is sourced by another script before Tomcat is executed.
 
+**Note**: You have to restart your application after placing the agent.
+
 **Note**: Currently, we support only Linux hosts, support for installing Windows hosts is in the making.
 
 ## Download
