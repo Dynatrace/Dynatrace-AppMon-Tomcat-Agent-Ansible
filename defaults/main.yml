@@ -1,0 +1,9 @@
+---
+dynatrace_tomcat_agent_env_var_name: CATALINA_OPTS
+dynatrace_tomcat_agent_env_var_file_name: 
+
+dynatrace_tomcat_agent_name: apache-tomcat-agent
+dynatrace_tomcat_agent_collector_hostname: localhost
+dynatrace_tomcat_agent_collector_port: 9998
+
+dynatrace_tomcat_agent_linux_agent_path: /opt/dynatrace/agent/lib64/libdtagent.so
