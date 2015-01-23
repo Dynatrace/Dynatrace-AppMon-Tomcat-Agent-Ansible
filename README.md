@@ -24,14 +24,15 @@ This roles requires an installation of the Dynatrace Java Agents package, which 
 
 As defined in ```defaults/main.yml```:
 
-| Name                                        | Default                                  | Description |
-|---------------------------------------------|------------------------------------------|-------------|
-| *dynatrace_tomcat_agent_env_var_name*       | CATALINA_OPTS                            | The name of the environment variable to be used for Agent injection. |
-| **dynatrace_tomcat_agent_env_var_file_name** |                                         | The name of the file to be modified. |
-| *dynatrace_tomcat_agent_name*               | apache-tomcat-agent                      | The name of the Java Agent as it appears in Dynatrace. |
-| *dynatrace_tomcat_agent_collector_hostname* | localhost                                | The location of the collector the Agent shall connect to. |
-| *dynatrace_tomcat_agent_collector_port*     | 9998                                     | The port on the collector the Agent shall connect to. |
-| *dynatrace_tomcat_agent_linux_agent_path*   | /opt/dynatrace/agent/lib64/libdtagent.so | The path to the Agent libary. |
+| Name                                         | Default                                  | Description |
+|----------------------------------------------|------------------------------------------|-------------|
+| *dynatrace_tomcat_agent_env_var_name*        | CATALINA_OPTS                            | The name of the environment variable to be used for Agent injection. |
+| **dynatrace_tomcat_agent_env_var_file_name** |                                          | The name of the file to be modified. |
+| *dynatrace_tomcat_agent_name*                | apache-tomcat-agent                      | The name of the Agent as it appears in Dynatrace. |
+| *dynatrace_tomcat_agent_collector_hostname*  | localhost                                | The location of the collector the Agent shall connect to. |
+| *dynatrace_tomcat_agent_collector_port*      | 9998                                     | The port on the collector the Agent shall connect to. |
+| *dynatrace_tomcat_agent_linux_agent_path*    | /opt/dynatrace/agent/lib64/libdtagent.so | The path to the Agent libary. |
+| *dynatrace_tomcat_agent_state*               | present                                  | Whether the agent shall be ```present``` or ```absent```. |
 
 ## Example Playbook
 

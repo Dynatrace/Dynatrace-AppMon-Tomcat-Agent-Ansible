@@ -124,3 +124,4 @@ dependencies:
     dynatrace_java_agent_collector_hostname: "{{ dynatrace_tomcat_agent_collector_hostname }}"
     dynatrace_java_agent_collector_port: "{{ dynatrace_tomcat_agent_collector_port }}"
     dynatrace_java_agent_linux_agent_path: "{{ dynatrace_tomcat_agent_linux_agent_path }}"
+    dynatrace_java_agent_state: "{{ dynatrace_tomcat_agent_state }}"
