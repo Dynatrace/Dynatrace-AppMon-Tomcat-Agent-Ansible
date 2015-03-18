@@ -40,7 +40,7 @@ As defined in ```defaults/main.yml```:
 
 	- hosts: all
 	  roles:
-	    - role: Dynatrace-Tomcat-Agent
+	    - role: dynatrace.Dynatrace-Tomcat-Agent
 	      dynatrace_tomcat_agent_env_var_file_name: /opt/tomcat/bin/catalina.sh
 
 ## Additional Resources
