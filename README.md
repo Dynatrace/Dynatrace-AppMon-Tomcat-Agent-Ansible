@@ -21,15 +21,16 @@ This roles depends on the following roles:
 
 As defined in ```defaults/main.yml```:
 
-| Name                                        | Default                                  | Description |
-|---------------------------------------------|------------------------------------------|-------------|
-| *dynatrace_tomcat_agent_env_var_name*       | CATALINA_OPTS                            | The name of the environment variable to be used for Agent injection. |
-| *dynatrace_tomcat_agent_env_var_file_name*  | **required**                             | The name of the file to be modified. |
-| *dynatrace_tomcat_agent_name*               | apache-tomcat-agent                      | The name of the Java Agent as it appears in Dynatrace. |
-| *dynatrace_tomcat_agent_collector_hostname* | localhost                                | The location of the collector the Agent shall connect to. |
-| *dynatrace_tomcat_agent_collector_port*     | 9998                                     | The port on the collector the Agent shall connect to. |
-| *dynatrace_tomcat_agent_linux_agent_path*   | /opt/dynatrace/agent/lib64/libdtagent.so | The path to the Agent libary. |
-| *dynatrace_tomcat_agent_state*              | present                                  | Whether the Agent shall be ```present``` or ```absent```. |
+| Name                                               | Default                                  | Description |
+|----------------------------------------------------|------------------------------------------|-------------|
+| *dynatrace_tomcat_agent_env_var_name*              | CATALINA_OPTS                            | The name of the environment variable to be used for Agent injection. |
+| *dynatrace_tomcat_agent_env_var_file_name*         | **required**                             | The name of the file to be modified. |
+| *dynatrace_tomcat_agent_env_var_file_insert_after* | BOF                                      | A regex, BOF or EOF for *begin-of-file* and *end-of-file*, respectively. If a given regex is not matched, the *-agentpath* option will be appended to the file. |
+| *dynatrace_tomcat_agent_name*                      | apache-tomcat-agent                      | The name of the Java Agent as it appears in Dynatrace. |
+| *dynatrace_tomcat_agent_collector_hostname*        | localhost                                | The location of the collector the Agent shall connect to. |
+| *dynatrace_tomcat_agent_collector_port*            | 9998                                     | The port on the collector the Agent shall connect to. |
+| *dynatrace_tomcat_agent_linux_agent_path*          | /opt/dynatrace/agent/lib64/libdtagent.so | The path to the Agent libary. |
+| *dynatrace_tomcat_agent_state*                     | present                                  | Whether the Agent shall be ```present``` or ```absent```. |
 
 ## Example Playbook
 
@@ -37,6 +38,7 @@ As defined in ```defaults/main.yml```:
 	  roles:
 	    - role: dynatrace.Dynatrace-Tomcat-Agent
 	      dynatrace_tomcat_agent_env_var_file_name: /opt/tomcat/bin/catalina.sh
+	      dynatrace_tomcat_agent_env_var_file_insert_after: '#!/bin/sh'
 
 ## Testing
 
