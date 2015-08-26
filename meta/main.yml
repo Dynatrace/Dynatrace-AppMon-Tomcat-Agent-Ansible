@@ -120,6 +120,7 @@ dependencies:
   - role: dynatrace.Dynatrace-Java-Agent
     dynatrace_java_agent_env_var_name: "{{ dynatrace_tomcat_agent_env_var_name }}"
     dynatrace_java_agent_env_var_file_name: "{{ dynatrace_tomcat_agent_env_var_file_name }}"
+    dynatrace_java_agent_env_var_file_insert_after: "{{ dynatrace_tomcat_agent_env_var_file_insert_after }}"
     dynatrace_java_agent_name: "{{ dynatrace_tomcat_agent_name }}"
     dynatrace_java_agent_collector_hostname: "{{ dynatrace_tomcat_agent_collector_hostname }}"
     dynatrace_java_agent_collector_port: "{{ dynatrace_tomcat_agent_collector_port }}"

@@ -1,6 +1,7 @@
 ---
 dynatrace_tomcat_agent_env_var_name: CATALINA_OPTS
 dynatrace_tomcat_agent_env_var_file_name: 
+dynatrace_tomcat_agent_env_var_file_insert_after: BOF
 
 dynatrace_tomcat_agent_name: apache-tomcat-agent
 dynatrace_tomcat_agent_collector_hostname: localhost
