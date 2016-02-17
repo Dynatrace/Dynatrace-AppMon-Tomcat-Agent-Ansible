@@ -8,14 +8,14 @@ This Ansible role installs and configures the Dynatrace Agent of the [Dynatrace 
 
 The role is available via:
 
-- [Ansible Galaxy](https://galaxy.ansible.com/list#/roles/5332)
+- [Ansible Galaxy](https://galaxy.ansible.com/Dynatrace/Dynatrace-Tomcat-Agent)
 - [GitHub](https://github.com/Dynatrace/Dynatrace-Tomcat-Agent-Ansible)
 
 ## Dependencies
 
 This roles depends on the following roles:
 
-- [Dynatrace-Java-Agent](https://galaxy.ansible.com/list#/roles/5327)
+- [Dynatrace-Java-Agent](https://galaxy.ansible.com/Dynatrace/Dynatrace-Java-Agent)
 
 ## Role Variables
 
